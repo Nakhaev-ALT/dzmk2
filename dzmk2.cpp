@@ -1,43 +1,43 @@
 #include <iostream>
-#include <cmath>  // для abs()
+#include <cmath>  // for abs()
 using namespace std;
 
 int main() {
-    int выбор;
-    double A, B, C, угол;
+    int choice;
+    double A, B, C, angle;
 
-    cout << "Выберите задачу:\n";
-    cout << "1. Найти отрезки AC и BC\n";
-    cout << "2. Преобразовать угол в радианы\n";
-    cout << "Ваш выбор (1 или 2): ";
-    cin >> выбор;
+    cout << "Choose a task:\n";
+    cout << "1. Find segments AC and BC\n";
+    cout << "2. Convert angle to radians\n";
+    cout << "Your choice (1 or 2): ";
+    cin >> choice;
 
-    if (выбор == 1) {
-        cout << "Введите A, B, C: ";
+    if (choice == 1) {
+        cout << "Enter A, B, C: ";
         cin >> A >> B >> C;
 
         double AC = abs(A - C);
         double BC = abs(B - C);
-        double сумма = AC + BC;
+        double sum = AC + BC;
 
         cout << "AC: " << AC << endl;
         cout << "BC: " << BC << endl;
-        cout << "Сумма: " << сумма << endl;
+        cout << "Sum: " << sum << endl;
     }
-    else if (выбор == 2) {
-        cout << "Введите угол в градусах: ";
-        cin >> угол;
+    else if (choice == 2) {
+        cout << "Enter angle in degrees: ";
+        cin >> angle;
 
-        if (угол >= 0 && угол < 360) {
-            double радианы = (угол * 3.14159) / 180.0;
-            cout << "Радианы: " << радианы << endl;
+        if (angle >= 0 && angle < 360) {
+            double radians = (angle * 3.14) / 180.0;  // Using 3.14 for π
+            cout << "Radians: " << radians << endl;
         }
         else {
-            cout << "Ошибка: угол должен быть от 0 до 360!" << endl;
+            cout << "Error: angle must be between 0 and 360!" << endl;
         }
     }
     else {
-        cout << "Неправильный выбор!" << endl;
+        cout << "Invalid choice!" << endl;
     }
 
     return 0;
